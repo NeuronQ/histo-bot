@@ -1,0 +1,34 @@
+# Basic .gitattributes for a python repo.
+
+# always convert line endings to LF on checkout
+* text=lf
+
+# Source files
+# ============
+*.pxd		text
+*.py 		text
+*.py3 		text
+*.pyw 		text
+*.pyx  		text
+
+# Binary files
+# ============
+*.db		binary
+*.p 		binary
+*.pkl 		binary
+*.pyc 		binary
+*.pyd		binary
+*.pyo 		binary
+*.png       binary
+*.jpg       binary
+*.exe       binary
+*.dll       binary
+*.so        binary
+
+# Declare files that will always have CRLF line endings on checkout.
+*.sln text eol=crlf
+
+# Note: .db, .p, and .pkl files are associated
+# with the python modules ``pickle``, ``dbm.*``,
+# ``shelve``, ``marshal``, ``anydbm``, & ``bsddb``
+# (among others).

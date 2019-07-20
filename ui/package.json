@@ -1,0 +1,42 @@
+{
+  "name": "frotend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "js-cookie": "^2.2.0",
+    "node-sass": "^4.11.0",
+    "object-path-immutable": "^3.0.0",
+    "query-string": "^6.2.0",
+    "react": "^16.8.3",
+    "react-color": "^2.17.0",
+    "react-dom": "^16.8.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.85.0",
+    "underscore": "^1.9.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": "src/"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "http://localhost:8000"
+}

@@ -1,0 +1,1474 @@
+--- cors on --
+[
+{
+    "model": "coreapp.architecture",
+    "pk": 1,
+    "fields": {
+        "created_at": "2019-03-10T09:48:56.449Z",
+        "updated_at": "2019-03-11T21:49:23.186Z",
+        "name": "UNet-ResNet34",
+        "model_class": "fastai.vision.models.resnet34",
+        "learner_class": "fastai.vision.learner.unet_learner",
+        "learner_constructor_params_json_str": "{ \"wd\": 1e-2 }",
+        "default_training_params_json_str": "{\"learning_rate\": 3e-4, \"pct_start\": 0.9}"
+    }
+},
+{
+    "model": "coreapp.mlmodel",
+    "pk": 1,
+    "fields": {
+        "created_at": "2019-03-10T09:53:07.637Z",
+        "updated_at": "2019-03-21T11:26:41.812Z",
+        "architecture": 1,
+        "current_parameters": null,
+        "name": "Model A",
+        "labels_json_str": "[{\"label\": \"__void__\", \"rgb\": [0, 0, 0]}, {\"label\": \"nucleus\", \"rgb\": [0, 0, 255]}, {\"rgb\": [0, 255, 0], \"label\": \"Segment 3\"}]",
+        "learner_constructor_params_json_str": "{}"
+    }
+},
+{
+    "model": "coreapp.mlmodel",
+    "pk": 2,
+    "fields": {
+        "created_at": "2019-03-11T22:48:59.913Z",
+        "updated_at": "2019-03-11T22:48:59.913Z",
+        "architecture": 1,
+        "current_parameters": null,
+        "name": "Model 2",
+        "labels_json_str": "{}",
+        "learner_constructor_params_json_str": "[]"
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 17,
+    "fields": {
+        "created_at": "2019-03-13T09:26:10.651Z",
+        "updated_at": "2019-03-13T09:26:54.935Z",
+        "model": 1,
+        "train_loss": 0.4973425567150116,
+        "validation_loss": 0.4775193929672241,
+        "score": 0.7735249996185303,
+        "losses_json_str": "{\"train_losses\": [0.795893669128418, 0.7506459355354309, 0.7121836543083191, 0.690828263759613, 0.6679695844650269, 0.6523908376693726, 0.6355476379394531, 0.6139020323753357, 0.5930931568145752, 0.6098341345787048, 0.6141095757484436, 0.5995822548866272, 0.5827527046203613, 0.5659322738647461, 0.549606442451477, 0.5323534607887268, 0.5242909789085388, 0.5223281979560852, 0.5072511434555054, 0.4973425567150116], \"validation_losses\": [0.5487216114997864, 0.5829289555549622, 0.5983354449272156, 0.5271986722946167, 0.7991569638252258, 0.5058420896530151, 0.45885398983955383, 0.7470243573188782, 0.40413111448287964, 0.4775193929672241], \"scores\": [0.7717999815940857, 0.7700499892234802, 0.7455750107765198, 0.7724249958992004, 0.7717999815940857, 0.7779749631881714, 0.7920999526977539, 0.7748000025749207, 0.8018499612808228, 0.7735249996185303]}",
+        "training_params_json_str": "{}",
+        "datasets": []
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 18,
+    "fields": {
+        "created_at": "2019-03-13T10:00:31.359Z",
+        "updated_at": "2019-03-13T10:00:31.359Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": []
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 19,
+    "fields": {
+        "created_at": "2019-03-13T10:01:30.076Z",
+        "updated_at": "2019-03-13T10:01:46.706Z",
+        "model": 1,
+        "train_loss": 0.46538302302360535,
+        "validation_loss": 0.47515609860420227,
+        "score": 0.7841249704360962,
+        "losses_json_str": "{\"train_losses\": [0.6501973271369934, 0.6395034193992615, 0.6251282095909119, 0.6063915491104126, 0.5909702181816101, 0.5683451890945435, 0.5473047494888306, 0.5308825969696045, 0.5450589060783386, 0.5754109621047974, 0.558571994304657, 0.5482675433158875, 0.5378148555755615, 0.5233150720596313, 0.5124645233154297, 0.49769747257232666, 0.48379629850387573, 0.4711759388446808, 0.46474742889404297, 0.46538302302360535], \"validation_losses\": [0.5596956014633179, 0.5294902324676514, 0.5260754823684692, 0.8682616949081421, 0.5251729488372803, 0.491927832365036, 0.5147252082824707, 0.4739396870136261, 0.9241923689842224, 0.47515609860420227], \"scores\": [0.7710750102996826, 0.7720749974250793, 0.7842999696731567, 0.7721499800682068, 0.8082999587059021, 0.7716249823570251, 0.849524974822998, 0.7811749577522278, 0.5439749956130981, 0.7841249704360962]}",
+        "training_params_json_str": "{}",
+        "datasets": []
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 20,
+    "fields": {
+        "created_at": "2019-03-13T10:21:44.029Z",
+        "updated_at": "2019-03-13T10:28:31.001Z",
+        "model": 1,
+        "train_loss": 0.5227541923522949,
+        "validation_loss": 0.49641087651252747,
+        "score": 0.7875750064849854,
+        "losses_json_str": "{\"train_losses\": [0.8171939253807068, 0.8044977188110352, 0.7655448913574219, 0.7471006512641907, 0.7324686050415039, 0.716282844543457, 0.698396623134613, 0.6816912889480591, 0.6607305407524109, 0.6394178867340088, 0.6171901226043701, 0.6018868684768677, 0.6228805780410767, 0.6030104160308838, 0.5914016962051392, 0.5774009227752686, 0.5648102164268494, 0.550830602645874, 0.5366326570510864, 0.5227541923522949], \"validation_losses\": [0.6044509410858154, 0.7320629954338074, 0.5977209210395813, 0.5395288467407227, 0.5009751915931702, 1.8309868574142456, 0.4953693747520447, 0.448886901140213, 0.4461561441421509, 0.49641087651252747], \"scores\": [0.7490999698638916, 0.40542498230934143, 0.7418749928474426, 0.7628249526023865, 0.774524986743927, 0.26932498812675476, 0.7718999981880188, 0.7762500047683716, 0.7897749543190002, 0.7875750064849854]}",
+        "training_params_json_str": "{}",
+        "datasets": []
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 21,
+    "fields": {
+        "created_at": "2019-03-13T11:17:55.613Z",
+        "updated_at": "2019-03-14T10:38:17.707Z",
+        "model": 1,
+        "train_loss": 0.43745750188827515,
+        "validation_loss": 0.3435501754283905,
+        "score": 0.8475749492645264,
+        "losses_json_str": "{\"train_losses\": [0.7715489268302917, 0.7507853507995605, 0.7235285639762878, 0.7011562585830688, 0.6761655211448669, 0.6644396781921387, 0.6376544833183289, 0.617189884185791, 0.5922877788543701, 0.5791923999786377, 0.5674887299537659, 0.5475816130638123, 0.5342937111854553, 0.515475869178772, 0.49932780861854553, 0.48357099294662476, 0.47196701169013977, 0.4618394076824188, 0.44879624247550964, 0.43745750188827515], \"validation_losses\": [0.5914265513420105, 0.5702289342880249, 0.6166637539863586, 0.5730981826782227, 1.0421477556228638, 0.5237417221069336, 0.539290726184845, 0.5248386263847351, 0.3725915849208832, 0.3435501754283905], \"scores\": [0.7627750039100647, 0.7611500024795532, 0.6838749647140503, 0.7676999568939209, 0.34542497992515564, 0.7738499641418457, 0.8168500065803528, 0.7852999567985535, 0.8259249925613403, 0.8475749492645264]}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 22,
+    "fields": {
+        "created_at": "2019-03-25T15:44:25.804Z",
+        "updated_at": "2019-03-25T15:44:25.804Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 23,
+    "fields": {
+        "created_at": "2019-03-25T15:47:30.291Z",
+        "updated_at": "2019-03-25T15:47:30.291Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 24,
+    "fields": {
+        "created_at": "2019-03-25T15:58:00.080Z",
+        "updated_at": "2019-03-25T15:58:00.080Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 25,
+    "fields": {
+        "created_at": "2019-03-25T16:02:12.260Z",
+        "updated_at": "2019-03-25T16:02:12.260Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 26,
+    "fields": {
+        "created_at": "2019-03-25T16:05:14.993Z",
+        "updated_at": "2019-03-25T16:05:14.993Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 27,
+    "fields": {
+        "created_at": "2019-03-25T16:13:18.543Z",
+        "updated_at": "2019-03-25T16:13:18.543Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 28,
+    "fields": {
+        "created_at": "2019-03-25T16:14:33.215Z",
+        "updated_at": "2019-03-25T16:14:33.215Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 29,
+    "fields": {
+        "created_at": "2019-03-25T16:15:35.154Z",
+        "updated_at": "2019-03-25T16:15:35.154Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 30,
+    "fields": {
+        "created_at": "2019-03-25T16:18:30.215Z",
+        "updated_at": "2019-03-25T16:18:30.215Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 31,
+    "fields": {
+        "created_at": "2019-03-25T16:20:16.052Z",
+        "updated_at": "2019-03-25T16:20:16.052Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.trainingsession",
+    "pk": 32,
+    "fields": {
+        "created_at": "2019-03-25T16:39:51.545Z",
+        "updated_at": "2019-03-25T16:39:51.545Z",
+        "model": 1,
+        "train_loss": null,
+        "validation_loss": null,
+        "score": null,
+        "losses_json_str": "{}",
+        "training_params_json_str": "{}",
+        "datasets": [
+            23
+        ]
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 17,
+    "fields": {
+        "created_at": "2019-03-13T09:26:10.670Z",
+        "updated_at": "2019-03-13T09:26:55.269Z",
+        "model": 1,
+        "training_session": 17,
+        "file_path": "model-1/ts-17-ps-17.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 18,
+    "fields": {
+        "created_at": "2019-03-13T10:01:30.152Z",
+        "updated_at": "2019-03-13T10:01:47.065Z",
+        "model": 1,
+        "training_session": 19,
+        "file_path": "model-1/ts-19-ps-18.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 19,
+    "fields": {
+        "created_at": "2019-03-13T10:21:44.098Z",
+        "updated_at": "2019-03-13T10:22:01.161Z",
+        "model": 1,
+        "training_session": 20,
+        "file_path": "model-1/ts-20-ps-19.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 20,
+    "fields": {
+        "created_at": "2019-03-13T10:23:32.710Z",
+        "updated_at": "2019-03-13T10:23:49.491Z",
+        "model": 1,
+        "training_session": 20,
+        "file_path": "model-1/ts-20-ps-20.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 21,
+    "fields": {
+        "created_at": "2019-03-13T10:28:14.949Z",
+        "updated_at": "2019-03-13T10:28:31.516Z",
+        "model": 1,
+        "training_session": 20,
+        "file_path": "model-1/ts-20-ps-21.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 22,
+    "fields": {
+        "created_at": "2019-03-14T08:25:30.087Z",
+        "updated_at": "2019-03-14T08:25:30.087Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 23,
+    "fields": {
+        "created_at": "2019-03-14T09:14:51.214Z",
+        "updated_at": "2019-03-14T09:15:43.581Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-23.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 24,
+    "fields": {
+        "created_at": "2019-03-14T09:15:43.639Z",
+        "updated_at": "2019-03-14T09:15:51.496Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-24.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 25,
+    "fields": {
+        "created_at": "2019-03-14T09:15:51.553Z",
+        "updated_at": "2019-03-14T09:15:58.952Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-25.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 26,
+    "fields": {
+        "created_at": "2019-03-14T09:15:58.995Z",
+        "updated_at": "2019-03-14T09:16:06.470Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-26.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 27,
+    "fields": {
+        "created_at": "2019-03-14T09:16:06.521Z",
+        "updated_at": "2019-03-14T09:16:14.047Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-27.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 28,
+    "fields": {
+        "created_at": "2019-03-14T09:16:14.095Z",
+        "updated_at": "2019-03-14T09:16:21.797Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-28.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 29,
+    "fields": {
+        "created_at": "2019-03-14T09:16:21.843Z",
+        "updated_at": "2019-03-14T09:16:29.363Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-29.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 30,
+    "fields": {
+        "created_at": "2019-03-14T09:16:29.405Z",
+        "updated_at": "2019-03-14T09:16:36.864Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-30.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 31,
+    "fields": {
+        "created_at": "2019-03-14T09:16:36.908Z",
+        "updated_at": "2019-03-14T09:16:44.468Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-31.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 32,
+    "fields": {
+        "created_at": "2019-03-14T09:16:44.511Z",
+        "updated_at": "2019-03-14T09:16:52.126Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-32.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 33,
+    "fields": {
+        "created_at": "2019-03-14T09:18:05.429Z",
+        "updated_at": "2019-03-14T09:18:21.114Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-33.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 34,
+    "fields": {
+        "created_at": "2019-03-14T09:19:58.378Z",
+        "updated_at": "2019-03-14T09:20:14.191Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-34.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 35,
+    "fields": {
+        "created_at": "2019-03-14T09:22:42.692Z",
+        "updated_at": "2019-03-14T09:22:42.692Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 36,
+    "fields": {
+        "created_at": "2019-03-14T09:24:57.937Z",
+        "updated_at": "2019-03-14T09:24:57.937Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 37,
+    "fields": {
+        "created_at": "2019-03-14T09:25:17.583Z",
+        "updated_at": "2019-03-14T09:25:17.583Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 38,
+    "fields": {
+        "created_at": "2019-03-14T09:25:56.902Z",
+        "updated_at": "2019-03-14T09:25:56.902Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 39,
+    "fields": {
+        "created_at": "2019-03-14T09:29:22.781Z",
+        "updated_at": "2019-03-14T09:29:38.403Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-39.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 40,
+    "fields": {
+        "created_at": "2019-03-14T09:46:27.563Z",
+        "updated_at": "2019-03-14T09:46:43.919Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-40.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 41,
+    "fields": {
+        "created_at": "2019-03-14T09:47:28.481Z",
+        "updated_at": "2019-03-14T09:47:44.447Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-41.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 42,
+    "fields": {
+        "created_at": "2019-03-14T09:55:42.691Z",
+        "updated_at": "2019-03-14T09:55:58.837Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-42.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 43,
+    "fields": {
+        "created_at": "2019-03-14T10:14:34.501Z",
+        "updated_at": "2019-03-14T10:14:34.501Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 44,
+    "fields": {
+        "created_at": "2019-03-14T10:15:10.074Z",
+        "updated_at": "2019-03-14T10:15:10.074Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 45,
+    "fields": {
+        "created_at": "2019-03-14T10:16:01.111Z",
+        "updated_at": "2019-03-14T10:16:01.111Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 46,
+    "fields": {
+        "created_at": "2019-03-14T10:17:00.026Z",
+        "updated_at": "2019-03-14T10:17:15.875Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-46.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 47,
+    "fields": {
+        "created_at": "2019-03-14T10:19:40.756Z",
+        "updated_at": "2019-03-14T10:19:56.522Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-47.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 48,
+    "fields": {
+        "created_at": "2019-03-14T10:23:36.193Z",
+        "updated_at": "2019-03-14T10:23:51.590Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-48.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 49,
+    "fields": {
+        "created_at": "2019-03-14T10:24:30.762Z",
+        "updated_at": "2019-03-14T10:24:30.762Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 50,
+    "fields": {
+        "created_at": "2019-03-14T10:33:52.288Z",
+        "updated_at": "2019-03-14T10:33:52.288Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": ""
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 51,
+    "fields": {
+        "created_at": "2019-03-14T10:34:40.837Z",
+        "updated_at": "2019-03-14T10:34:56.619Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-51.pth"
+    }
+},
+{
+    "model": "coreapp.parameters",
+    "pk": 52,
+    "fields": {
+        "created_at": "2019-03-14T10:38:02.230Z",
+        "updated_at": "2019-03-14T10:38:18.213Z",
+        "model": 1,
+        "training_session": 21,
+        "file_path": "model-1/ts-21-ps-52.pth"
+    }
+},
+{
+    "model": "coreapp.dataset",
+    "pk": 1,
+    "fields": {
+        "created_at": "2019-03-10T09:57:10.372Z",
+        "updated_at": "2019-03-10T10:54:08.790Z",
+        "name": "DS 1"
+    }
+},
+{
+    "model": "coreapp.dataset",
+    "pk": 23,
+    "fields": {
+        "created_at": "2019-03-20T15:21:48.136Z",
+        "updated_at": "2019-03-20T15:21:48.136Z",
+        "name": "DS B"
+    }
+},
+{
+    "model": "coreapp.image",
+    "pk": 1,
+    "fields": {
+        "created_at": "2019-03-10T09:58:40.980Z",
+        "updated_at": "2019-03-10T10:02:51.190Z",
+        "w": 200,
+        "h": 200,
+        "name": "01",
+        "image": "images/e70dd58d893d492f9666464b2f850515.png"
+    }
+},
+{
+    "model": "coreapp.image",
+    "pk": 2,
+    "fields": {
+        "created_at": "2019-03-10T09:59:16.935Z",
+        "updated_at": "2019-03-10T10:04:09.865Z",
+        "w": 200,
+        "h": 200,
+        "name": "02",
+        "image": "images/77c1e412b97947c4a087e390f1a688bd.png"
+    }
+},
+{
+    "model": "coreapp.image",
+    "pk": 3,
+    "fields": {
+        "created_at": "2019-03-10T10:00:21.895Z",
+        "updated_at": "2019-03-10T10:04:19.229Z",
+        "w": 200,
+        "h": 200,
+        "name": "22",
+        "image": "images/1b2e1010cc91462c8630c72679e5a04f.png"
+    }
+},
+{
+    "model": "coreapp.image",
+    "pk": 72,
+    "fields": {
+        "created_at": "2019-03-20T15:21:26.841Z",
+        "updated_at": "2019-03-20T15:21:26.841Z",
+        "w": 600,
+        "h": 600,
+        "name": "whole",
+        "image": "images/b9157b914e9940bc9ef430c6e554aa85.jpg"
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 1,
+    "fields": {
+        "created_at": "2019-03-10T10:41:34.987Z",
+        "updated_at": "2019-03-20T15:07:52.344Z",
+        "w": 200,
+        "h": 200,
+        "name": "01",
+        "image": "labels/7bb8eb3513004f82bfabbac2bee319fd.png",
+        "processed_image_path": "proc_labels/7bb8eb3513004f82bfabbac2bee319fd.png",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 2,
+    "fields": {
+        "created_at": "2019-03-10T10:41:50.628Z",
+        "updated_at": "2019-03-20T15:13:33.458Z",
+        "w": 200,
+        "h": 200,
+        "name": "02",
+        "image": "labels/1eae2a273ab347898755b2fb25fd111d.png",
+        "processed_image_path": "proc_labels/1eae2a273ab347898755b2fb25fd111d.png",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 3,
+    "fields": {
+        "created_at": "2019-03-10T10:42:03.206Z",
+        "updated_at": "2019-03-20T15:07:57.189Z",
+        "w": 200,
+        "h": 200,
+        "name": "22",
+        "image": "labels/359880cb59f747cfa52bc6b6cc29d3af.png",
+        "processed_image_path": "proc_labels/359880cb59f747cfa52bc6b6cc29d3af.png",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 26,
+    "fields": {
+        "created_at": "2019-03-21T16:02:25.266Z",
+        "updated_at": "2019-03-21T16:02:25.266Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/383f579800ab4d488710bdcd3023e06c.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 27,
+    "fields": {
+        "created_at": "2019-03-25T15:26:36.635Z",
+        "updated_at": "2019-03-25T15:26:36.635Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/5fd76dd9ff1940c580951d7f50a70d6e.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 28,
+    "fields": {
+        "created_at": "2019-03-25T15:38:32.257Z",
+        "updated_at": "2019-03-25T15:38:32.257Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/c17437e4b27046cba9d2b149251c6380.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 29,
+    "fields": {
+        "created_at": "2019-03-25T15:42:27.484Z",
+        "updated_at": "2019-03-25T15:42:27.484Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/99496e9aa1cf45ad81222b880dd9b723.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 30,
+    "fields": {
+        "created_at": "2019-03-25T15:43:26.307Z",
+        "updated_at": "2019-03-25T15:43:26.307Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/9b00b4b1ced64ff49ac8d9a8d9bf1897.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 31,
+    "fields": {
+        "created_at": "2019-03-25T15:44:23.028Z",
+        "updated_at": "2019-03-25T15:44:23.029Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/18d1629d04bf43b1b7fcacf1211f7f74.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 32,
+    "fields": {
+        "created_at": "2019-03-25T15:47:15.849Z",
+        "updated_at": "2019-03-25T15:47:15.849Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/4cf1ea425dd24a9aa74b1a93138ba9cb.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 33,
+    "fields": {
+        "created_at": "2019-03-25T15:57:45.066Z",
+        "updated_at": "2019-03-25T15:57:45.066Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/4eb5a1dcfa9a48509dc315902373b99e.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 34,
+    "fields": {
+        "created_at": "2019-03-25T16:02:09.334Z",
+        "updated_at": "2019-03-25T16:02:09.334Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/7c9000fc17404397b9fe18e9b4ae6a28.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 35,
+    "fields": {
+        "created_at": "2019-03-25T16:05:13.129Z",
+        "updated_at": "2019-03-25T16:05:13.129Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/81dfc3641deb4c2d83f57e4711276df4.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 36,
+    "fields": {
+        "created_at": "2019-03-25T16:13:14.022Z",
+        "updated_at": "2019-03-25T16:13:14.022Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/49714998da98412796ee9ae6e75cfd1c.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 37,
+    "fields": {
+        "created_at": "2019-03-25T16:14:30.732Z",
+        "updated_at": "2019-03-25T16:14:30.732Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/6a0c3ccac14d4526bfd69d6f0392e2f0.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 38,
+    "fields": {
+        "created_at": "2019-03-25T16:15:33.391Z",
+        "updated_at": "2019-03-25T16:15:33.391Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/2da3586ed4c64821a970d8d7a266d723.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 39,
+    "fields": {
+        "created_at": "2019-03-25T16:18:27.280Z",
+        "updated_at": "2019-03-25T16:18:27.280Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/53daa65476364d75b45491a68f6b3c70.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 40,
+    "fields": {
+        "created_at": "2019-03-25T16:20:13.471Z",
+        "updated_at": "2019-03-25T16:20:13.471Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/20bb03a1a04d4e9da99e7e63a8a50482.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.labelimage",
+    "pk": 41,
+    "fields": {
+        "created_at": "2019-03-25T16:39:35.433Z",
+        "updated_at": "2019-03-25T16:39:35.433Z",
+        "w": 600,
+        "h": 600,
+        "name": "",
+        "image": "labels/e873e2c0c0a948579c699cd2f0242eea.png",
+        "processed_image_path": "",
+        "models": [
+            1
+        ]
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 11,
+    "fields": {
+        "created_at": "2019-03-14T16:27:48.613Z",
+        "updated_at": "2019-03-14T16:27:48.615Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "image_tiles/3/100x100_0-0-100-100.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 12,
+    "fields": {
+        "created_at": "2019-03-14T16:27:48.621Z",
+        "updated_at": "2019-03-14T16:27:48.623Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "image_tiles/3/100x100_100-0-200-100.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 13,
+    "fields": {
+        "created_at": "2019-03-14T16:27:48.629Z",
+        "updated_at": "2019-03-14T16:27:48.630Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "image_tiles/3/100x100_0-100-100-200.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 14,
+    "fields": {
+        "created_at": "2019-03-14T16:27:48.637Z",
+        "updated_at": "2019-03-14T16:27:48.638Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "image_tiles/3/100x100_100-100-200-200.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 15,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.413Z",
+        "updated_at": "2019-03-14T16:39:26.414Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "image_tiles/1/100x100_0-0-100-100.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 16,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.421Z",
+        "updated_at": "2019-03-14T16:39:26.422Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "image_tiles/1/100x100_100-0-200-100.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 17,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.429Z",
+        "updated_at": "2019-03-14T16:39:26.430Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "image_tiles/1/100x100_0-100-100-200.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 18,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.437Z",
+        "updated_at": "2019-03-14T16:39:26.438Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "image_tiles/1/100x100_100-100-200-200.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 19,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.478Z",
+        "updated_at": "2019-03-14T16:39:26.479Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "image_tiles/2/100x100_0-0-100-100.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 20,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.486Z",
+        "updated_at": "2019-03-14T16:39:26.488Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "image_tiles/2/100x100_100-0-200-100.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 21,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.495Z",
+        "updated_at": "2019-03-14T16:39:26.496Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "image_tiles/2/100x100_0-100-100-200.png"
+    }
+},
+{
+    "model": "coreapp.imagetile",
+    "pk": 22,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.502Z",
+        "updated_at": "2019-03-14T16:39:26.503Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "image_tiles/2/100x100_100-100-200-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 1,
+    "fields": {
+        "created_at": "2019-03-14T16:16:39.245Z",
+        "updated_at": "2019-03-14T16:16:39.247Z",
+        "w": 150,
+        "h": 150,
+        "parent": 3,
+        "img": "label_image_tiles/3/150x150_0-0-150-150.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 2,
+    "fields": {
+        "created_at": "2019-03-14T16:16:39.254Z",
+        "updated_at": "2019-03-14T16:16:39.255Z",
+        "w": 150,
+        "h": 150,
+        "parent": 3,
+        "img": "label_image_tiles/3/150x150_50-0-200-150.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 3,
+    "fields": {
+        "created_at": "2019-03-14T16:16:39.262Z",
+        "updated_at": "2019-03-14T16:16:39.263Z",
+        "w": 150,
+        "h": 150,
+        "parent": 3,
+        "img": "label_image_tiles/3/150x150_0-50-150-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 4,
+    "fields": {
+        "created_at": "2019-03-14T16:16:39.270Z",
+        "updated_at": "2019-03-14T16:16:39.271Z",
+        "w": 150,
+        "h": 150,
+        "parent": 3,
+        "img": "label_image_tiles/3/150x150_50-50-200-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 5,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.448Z",
+        "updated_at": "2019-03-14T16:39:26.450Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "label_image_tiles/1/100x100_0-0-100-100.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 6,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.454Z",
+        "updated_at": "2019-03-14T16:39:26.455Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "label_image_tiles/1/100x100_100-0-200-100.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 7,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.459Z",
+        "updated_at": "2019-03-14T16:39:26.460Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "label_image_tiles/1/100x100_0-100-100-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 8,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.464Z",
+        "updated_at": "2019-03-14T16:39:26.465Z",
+        "w": 100,
+        "h": 100,
+        "parent": 1,
+        "img": "label_image_tiles/1/100x100_100-100-200-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 9,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.513Z",
+        "updated_at": "2019-03-14T16:39:26.514Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "label_image_tiles/2/100x100_0-0-100-100.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 10,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.518Z",
+        "updated_at": "2019-03-14T16:39:26.519Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "label_image_tiles/2/100x100_100-0-200-100.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 11,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.524Z",
+        "updated_at": "2019-03-14T16:39:26.526Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "label_image_tiles/2/100x100_0-100-100-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 12,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.531Z",
+        "updated_at": "2019-03-14T16:39:26.532Z",
+        "w": 100,
+        "h": 100,
+        "parent": 2,
+        "img": "label_image_tiles/2/100x100_100-100-200-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 13,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.543Z",
+        "updated_at": "2019-03-14T16:39:26.545Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "label_image_tiles/3/100x100_0-0-100-100.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 14,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.550Z",
+        "updated_at": "2019-03-14T16:39:26.551Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "label_image_tiles/3/100x100_100-0-200-100.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 15,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.555Z",
+        "updated_at": "2019-03-14T16:39:26.557Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "label_image_tiles/3/100x100_0-100-100-200.png"
+    }
+},
+{
+    "model": "coreapp.labelimagetile",
+    "pk": 16,
+    "fields": {
+        "created_at": "2019-03-14T16:39:26.561Z",
+        "updated_at": "2019-03-14T16:39:26.563Z",
+        "w": 100,
+        "h": 100,
+        "parent": 3,
+        "img": "label_image_tiles/3/100x100_100-100-200-200.png"
+    }
+},
+{
+    "model": "coreapp.datasetimage",
+    "pk": 1,
+    "fields": {
+        "created_at": "2019-03-10T10:42:34.464Z",
+        "updated_at": "2019-03-10T10:42:34.464Z",
+        "dataset": 1,
+        "image": 1,
+        "label_image": 1,
+        "purpose": "train"
+    }
+},
+{
+    "model": "coreapp.datasetimage",
+    "pk": 2,
+    "fields": {
+        "created_at": "2019-03-10T10:42:34.465Z",
+        "updated_at": "2019-03-10T10:42:34.465Z",
+        "dataset": 1,
+        "image": 2,
+        "label_image": 2,
+        "purpose": "train"
+    }
+},
+{
+    "model": "coreapp.datasetimage",
+    "pk": 3,
+    "fields": {
+        "created_at": "2019-03-10T10:54:08.796Z",
+        "updated_at": "2019-03-10T10:54:08.796Z",
+        "dataset": 1,
+        "image": 3,
+        "label_image": 3,
+        "purpose": "validation"
+    }
+},
+{
+    "model": "coreapp.datasetimage",
+    "pk": 32,
+    "fields": {
+        "created_at": "2019-03-20T15:21:48.137Z",
+        "updated_at": "2019-03-20T15:21:48.137Z",
+        "dataset": 23,
+        "image": 72,
+        "label_image": null,
+        "purpose": "train"
+    }
+},
+{
+    "model": "coreapp.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$j3mORXXrma8Z$PK68LjUz/7PGSJeTwJ/qGHryG1Tq6LQltHXYGjRicv0=",
+        "last_login": "2019-03-27T10:04:29.110Z",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-03-10T09:43:10.859Z",
+        "email": "io@neuronq.ro",
+        "full_name": "",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

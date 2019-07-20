@@ -1,0 +1,35 @@
+## Python & Jupyter defaults
+*.egg-info
+*.pot
+*.py[co]
+.tox/
+__pycache__
+MANIFEST
+.ipynb_checkpoints/
+.pytest_cache/
+
+## editors/IDE
+# (technically these should be in each user's $GIT_DIR/info/exclude)
+.vscode/
+.idea/
+*.sublime-*
+*~
+*.swp
+*.swo
+
+## virtual environments
+.env
+
+## convenience activate
+activate.sh
+
+## db and data
+/data
+!/data/.gitkeep
+!/data/images/.gitkeep
+!/data/labels/.gitkeep
+!/data/learners/.gitkeep
+!/data/parameters/.gitkeep
+!/data/raw-labels/.gitkeep
+/old_data
+/api/db.sqlite3

@@ -1,0 +1,102 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_static admin_modify %}
+{% block extrahead %}{{ block.super }}
+<script type="text/javascript" src="/static/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+{% endblock %}
+{% block content %}
+<div id="content-main">
+  <form action="" method="POST">
+    {% csrf_token %}
+    {% if form.non_field_errors|length > 0 %}
+    <p class="errornote">
+      Please correct the errors below.
+    </p>
+    {% if form.non_field_errors %}
+    <div class="errornote">
+      {% for error in form.non_field_errors %}
+      <pre>{{ error|safe }}</pre>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% endif %}
+    <fieldset class="module aligned">
+      {% for field in form %}
+      <div class="form-row">
+        {{ field.errors }}
+        {{ field.label_tag }}
+        {{ field }}
+        {% if field.field.help_text %}
+        <p class="help">
+          {{ field.field.help_text|safe }}
+        </p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </fieldset>
+    <div class="submit-row">
+      <input type="submit" class="default" value="Submit"/>
+    </div>
+    <div class="submit-row" id="results_container" style="border: 1px solid blue">
+      <pre style="text-align: left"></pre>
+    </div>
+  </form>
+</div>
+<script>
+  django.jQuery(function ($) {
+    'use strict';
+    var modelId = 1;
+    var tsId = ('000000' + Math.ceil(Math.random() * 1e9)).slice(-9);
+
+    $('input[type=submit]').on('click', function (ev) {
+      ev.preventDefault();
+      var params = {
+        type: "train",
+        // __fake__: true,
+        datasets: $('#id_datasets').val().map(function (it) {
+          return +it
+        }),
+        training_hparams: JSON.parse($('#id_training_hparams').val()),
+      };
+
+      log('Training: ' + JSON.stringify(params, null, 2));
+
+      makeWsPromise(modelId, tsId, log).then(function (ws) {
+        ws.send(JSON.stringify(params));
+      });
+    });
+
+    function log(s) {
+      $('#results_container pre').text(
+        $('#results_container pre').text() + "\n" + s
+      );
+    }
+  })();
+
+  function makeWsPromise(modelId, tsId, log) {
+    'use strict';
+    return new Promise((resolve, reject) => {
+      console.log("~ websocket connecting");
+      var _ws = new WebSocket(
+        "ws://localhost:8000/ws/train" +
+        "/model-" + modelId +
+        "/ts-" + tsId + "/"
+      );
+      console.log("~ websocket created", _ws);
+      _ws.onerror = ev => {
+        console.log("~ ws error", ev);
+        reject(ev);
+      };
+      _ws.onopen = ev => {
+        console.log("~ ws open");
+        resolve(_ws, ev);
+      };
+    }).then(ws => {
+      ws.onmessage = function (ev) {
+        log("--- received:" + ev.data);
+      };
+      return ws;
+    })
+  }
+</script>
+{% endblock %}
