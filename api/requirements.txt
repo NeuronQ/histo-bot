@@ -7,5 +7,5 @@ djangorestframework==3.9.2
 fastai==1.0.47.post1
 ipdb==0.11
 ipython==7.3.0
-Pillow==5.3.0
+Pillow==9.3.0
 service-identity==18.1.0
